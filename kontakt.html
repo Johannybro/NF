@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <meta name="author" content="Heidi Callesen, Johan Nybro Nielsen, Milla Arushnee Nielsen, Patrick Koo Madsen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+
+    <title>Norsminde Fiskehus - Kontakt</title>
+    <meta name="description" content="Norsminde Fiskehusets kontaktinformationer, google maps">
+</head>
+
+<body>
+    <!-- NAV - Menubar -->
+    <div class="gridwrapper">
+        <header>
+            <nav class="grid-nav">
+                <a href="menu.html">Menu</a>
+                <a href="opskrifter.html">Opskrifter</a>
+                <a href="index.html" class="nohover"><img src="images/Logo_animation_curbed_short.gif" alt="Norsminde Fiskehusets Logo"></a>
+                <a href="om_os.html">Om os</a>
+                <a href="kontakt.html" class="active">Kontakt</a>
+            </nav>
+        </header>
+
+        <!-- Content - Kontaktinformation + Kontaktformular -->
+        <section class=grid-content>
+            <div class="kontakt findos_flexrow">
+                <div class="findos findos_flexcolumn">
+                    <h2>Her finder du os</h2>
+                    <p>Norsminde Fiskehus <br><br> Gl. Krovej 1A <br>8300 Odder </p>
+                    <br>
+                    <p>Telefon: 2555 5203</p>
+                    <br>
+                    <p>Mail: Norsmindefiskehus@gmail.com</p>
+                    <img src="images/fisk_animation.gif" alt="Pynte fisk" class="pyntefisk_pos5">
+                    <img src="images/fisk_animation.gif" alt="Pynte fisk" class="pyntefisk_pos6">
+                </div>
+                <div class="kontaktform findos_flexcolumn">
+                    <h3>Du kan kontakte os her uden for sæsonen</h3>
+                    <form action="action_page.php">
+
+                        <label for="fname">Navn</label>
+                        <input type="text" id="fname" name="firstname">
+
+                        <label for="lname">Email</label>
+                        <input type="text" id="lname" name="lastname">
+
+                        <label for="lname">Telefon</label>
+                        <input type="text" id="phone" name="phone">
+
+                        <label for="subject">Emne</label>
+                        <textarea id="subject" name="subject" style="height:200px"></textarea>
+
+                        <input type="submit" value="Send">
+
+                    </form>
+                </div>
+                
+            </div>
+            <div id="map"></div>
+        </section>
+
+
+        <!-- Aside - Google Maps -->
+        <aside class="grid-aside">
+            <div class="mapheight"></div>
+        </aside>
+
+        <!-- Footer -->
+        <footer class="grid-footer">
+            <div class="container_footer">
+                <div class="left-half">
+                    <a href="tel:25555203"><img src="images/kontakt_ikoner/icon_telefon.png" alt="Telefon ikon">+45 25 55 52 03</a>
+                    <a href="mailto:kontakt@norsmindefiskehus.dk"><img src="images/kontakt_ikoner/icon_mail.png" alt="Email ikon">kontakt@norsmindefiskehus.dk</a>
+                    <a href="https://www.google.dk/maps/place/Norsminde+Fiskehus/@56.0226543,10.2610306,17z/data=!3m1!4b1!4m5!3m4!1s0x464c4412ad4caf79:0x2fa4c9054211bc3c!8m2!3d56.0226543!4d10.2624646"><img src="images/kontakt_ikoner/icon_adresse.png" alt="Adresse ikon">Gl. Krovej 104, 8300 Odder</a></div>
+                <div class="right-half">
+                    <a href="https://www.facebook.com/FiskehusetNorsminde">
+            <img src="images/kontakt_ikoner/icon_facebook.png" alt="Facebook Ikon"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Script - Google Maps -->
+    <script>
+        function initMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(56.022600, 10.262500),
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFz3tNubLsH0F93BSG8AauCK1lX9lpk0M&callback=initMap">
+
+
+    </script>
+</body>
+
+</html>
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout -->
